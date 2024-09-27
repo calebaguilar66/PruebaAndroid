@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,7 +45,7 @@ fun Greeting(modifier: Modifier = Modifier) {
         Column(horizontalAlignment = Alignment.CenterHorizontally){
             Logo()
             Text("Caleb Aguilar", fontSize = 30.sp)
-            Text("Tarjeta de Presentacion", fontSize = 12.sp)
+            Text("Informatico", fontSize = 12.sp)
 
             Row{
                 LogoPequeño()
@@ -70,5 +71,5 @@ fun Logo(){
 @Composable
 fun LogoPequeño(){
     val imagenn = painterResource(R.drawable.images)
-    Image(imagenn, null, Modifier.size(20.dp))
+    Icon(imagenn, null, Modifier.size(20.dp))
 }
