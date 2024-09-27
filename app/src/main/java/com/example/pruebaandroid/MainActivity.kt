@@ -6,8 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -15,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pruebaandroid.ui.theme.PruebaAndroidTheme
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
@@ -42,10 +45,30 @@ fun Greeting(modifier: Modifier = Modifier) {
             Logo()
             Text("Caleb Aguilar", fontSize = 30.sp)
             Text("Tarjeta de Presentacion", fontSize = 12.sp)
+
+            Row{
+                LogoPequeño()
+                Text("+9237897237", fontSize = 12.sp)
+            }
+            Row{
+                LogoPequeño()
+                Text("caleb@gmail.cl", fontSize = 12.sp)
+
+            }
+            Row{
+                LogoPequeño()
+                Text("@calebaguilar66", fontSize = 12.sp)
+
+            }
         }
 }
 @Composable
 fun Logo(){
     val imagen = painterResource(R.drawable.images)
     Image(imagen, null)
+}
+@Composable
+fun LogoPequeño(){
+    val imagenn = painterResource(R.drawable.images)
+    Image(imagenn, null, Modifier.size(20.dp))
 }
