@@ -40,6 +40,8 @@ class MainActivity : ComponentActivity() {
 fun Greeting(modifier: Modifier = Modifier) {
         Column(horizontalAlignment = Alignment.CenterHorizontally){
             Logo()
+            Text("Caleb Aguilar", fontSize = 30.sp)
+            Text("Tarjeta de Presentacion", fontSize = 12.sp)
         }
 }
 @Composable
